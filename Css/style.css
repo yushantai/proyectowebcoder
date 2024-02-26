@@ -507,3 +507,96 @@
 .navbar-nav .nav-link:hover {
     color: black; /* Cambia esto por el color que prefieras */
 }
+
+/****************CURSOS*********************/
+.banner-cursos {
+    display: flex; /* Habilita Flexbox para posicionar el contenedor de texto y la imagen lado a lado */
+    align-items: flex-start; /* Alinea los elementos al inicio, útil si la imagen es más alta que el texto */
+    justify-content: space-between; /* Separa el contenedor de texto y la imagen */
+    padding: 20px;
+}
+
+.texto {
+    /* No es necesario especificar flex aquí, ya que queremos que los elementos (h2 y p) se apilen de manera predeterminada */
+    max-width: 50%; /* Limita el ancho del contenedor de texto para evitar que ocupe demasiado espacio */
+}
+
+.Cursos {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Agrega espacio entre el título y el párrafo */
+}
+
+.imagen {
+    width: 45%;
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.VariosCursos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
+    gap: 5px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    align-items: center; /* Alinea verticalmente */
+    padding: 20px; /* Espacio alrededor del contenedor */
+}
+
+.card {
+    margin: 20px; /* Margen alrededor de cada tarjeta */
+    display: flex;
+    flex-direction: column; /* Organiza el contenido de la tarjeta verticalmente */
+    align-items: center; /* Centra el contenido de la tarjeta horizontalmente */
+}
+
+.card-img-top {
+    width: 100%; /* Hace que la imagen ocupe el ancho completo de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.card-body {
+    padding: 10px; /* Espacio alrededor del contenido dentro de la tarjeta */
+}
+
+.btn-primary {
+    margin-top: 10px; /* Espacio encima del botón */
+}
+
+/******Traduccion*****/
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para la sección de traducción */
+.banner-traduccion {
+    display: flex;
+    flex-direction: column; /* Esto asegura que el título, párrafo e imagen se apilen verticalmente */
+    align-items: flex-start; /* Alinea elementos a la izquierda */
+    padding: 20px; /* Añade algo de espacio alrededor */
+}
+
+.banner-traduccion img {
+    width: auto; /* Ajusta este valor según necesites para controlar el tamaño de la imagen */
+    max-width: 100%; /* Asegura que la imagen no se desborde de su contenedor */
+    margin-top: 20px; /* Espacio entre el texto y la imagen */
+}
+
+/* Estilos para el formulario de contacto */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos del formulario verticalmente */
+    align-items: center; /* Centra el formulario en el contenedor */
+    padding: 20px;
+}
+
+.formulario-contacto form {
+    width: 100%; /* Ajusta este valor para controlar el ancho del formulario */
+    max-width: 500px; /* Establece un ancho máximo para el formulario */
+}
+
+.formulario-contacto input[type="submit"] {
+    margin-top: 10px; /* Espacio por encima del botón enviar */
+}
+

@@ -45,37 +45,32 @@
     </header>
     
     <main>
-        <section>
-            <H2>Traduccion</H2>
-            <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
-                ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            <img src="../Imagen/pexels-polina-tankilevitch-4443191.jpg" 
-            class="imagen"
-            alt="" srcset="">
+      <section class="banner-traduccion">
+        <h2>Traducción</h2>
+        <p>Vorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+            ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <img src="../Imagen/pexels-polina-tankilevitch-4443191.jpg" class="imagen" alt="">
+    </section>
     
-         </section>
+    <section class="formulario-contacto">
+        <h1>Formulario de Contacto</h1>
+        <form action="/submit_form" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br>
+            
+            <label for="email">Correo electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+    
 
-         <section>
-            <h1>Formulario de Contacto</h1>
-            <form action="/submit_form" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br>
-                
-                <label for="email">Correo electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
-                
-                <input type="submit" value="Enviar">
-            </form>
-        </body>
-         </section>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
     </main>
+        
 </body>
 <!----------------------------------------------------------FOOTER---------------------------------------------------------->
 
