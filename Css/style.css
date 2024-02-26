@@ -512,13 +512,12 @@
 .banner-cursos {
     display: flex; /* Habilita Flexbox para posicionar el contenedor de texto y la imagen lado a lado */
     align-items: flex-start; /* Alinea los elementos al inicio, útil si la imagen es más alta que el texto */
-    justify-content: space-between; /* Separa el contenedor de texto y la imagen */
+    justify-content: space-between; 
     padding: 20px;
 }
 
 .texto {
-    /* No es necesario especificar flex aquí, ya que queremos que los elementos (h2 y p) se apilen de manera predeterminada */
-    max-width: 50%; /* Limita el ancho del contenedor de texto para evitar que ocupe demasiado espacio */
+    max-width: 50%; 
 }
 
 .Cursos {
@@ -541,25 +540,9 @@
     padding: 20px; /* Espacio alrededor del contenedor */
 }
 
-.card {
-    margin: 20px; /* Margen alrededor de cada tarjeta */
-    display: flex;
-    flex-direction: column; /* Organiza el contenido de la tarjeta verticalmente */
-    align-items: center; /* Centra el contenido de la tarjeta horizontalmente */
-}
 
-.card-img-top {
-    width: 100%; /* Hace que la imagen ocupe el ancho completo de la tarjeta */
-    height: auto; /* Mantiene la proporción de la imagen */
-}
 
-.card-body {
-    padding: 10px; /* Espacio alrededor del contenido dentro de la tarjeta */
-}
 
-.btn-primary {
-    margin-top: 10px; /* Espacio encima del botón */
-}
 
 /******Traduccion*****/
 /* Estilos generales */
