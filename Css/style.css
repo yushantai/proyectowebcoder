@@ -1,0 +1,509 @@
+/* reset css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.header{
+    background-color: #fff;
+}
+/*******************************************************************MAIN******************************************/
+
+   /*******************************************************************BANNER**************************/
+.banner-index {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+   /*********************Titulo y boton **************************/
+
+.texto-y-boton {
+    display: flex;
+    flex-direction: column; /* Esto coloca el título sobre el botón */
+    align-items: center; /* Esto centra ambos elementos horizontalmente */
+    justify-content: center; /* Esto ayuda a centrar los elementos verticalmente si es necesario */
+}
+.Principal-titulo-index {
+    display: flex;
+    width: auto;
+    height:auto;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 10px;
+    margin-bottom: 15px; /* Esto añade espacio entre el título y el botón */
+    
+    color: #194569; 
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-size: normal;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+
+}
+
+.boton-conoce-mas {
+    display: block; /* Cambiado a inline-flex para que se ajuste al contenido */
+    justify-content: center; /* Centrar el contenido del botón horizontalmente */
+    align-items: center; /* Centrar el contenido del botón verticalmente */
+    padding: 10px 20px; 
+    text-decoration: none; /* Quitar el subrayado de los enlaces */
+
+    margin: px auto; 
+    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+    
+    color: #fff; /* Color del texto */
+    border: 2px solid #7FB0CE; /* Agregar contorno al botón */
+    background-color: #7FB0CE; /* Fondo transparente */
+    border-radius: 1em;/* Bordes del boton */
+
+    font-family: 'Nunito'; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.25px;
+
+    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+}
+
+.boton-conoce-mas:hover, .boton-conoce-mas:focus {
+    color: #fff; /* Cambiar el color del texto al pasar el mouse o enfocar */
+    background-color: #194569; /* Cambiar el fondo al pasar el mouse o enfocar */
+}
+
+   /*********************imagenes**************************/
+.carousel {
+    margin: 8vw; /* Esto asegura que el margen sea siempre el 2% del ancho de la ventana del navegador */
+}
+.carousel img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
+    height: auto; /* Mantiene el aspect ratio de la imagen */
+}
+
+
+   /********************Screen**************************/
+
+/* Ajustes generales para pantallas mayores a 768px */
+@media only screen and (min-width: 768px) {
+    .banner-index {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .texto-y-boton {
+        margin-left: 5%; /* Espacio del 5% con el borde izquierdo de la pantalla */
+        flex: 1; /* Ocupa el espacio disponible */
+    }
+
+    .carousel {
+        margin-right: 10%; /* Espacio del 10% con el borde derecho de la pantalla */
+        flex: 1; /* Ocupa el espacio disponible */
+    }
+}
+
+/* Ajustes específicos para pantallas mayores a 1200px */
+@media only screen and (min-width: 1200px) {
+    .banner-index {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .texto-y-boton, .carousel {
+        /* Reiniciamos los márgenes para asegurar la alineación correcta */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .texto-y-boton {
+        /* Alineación al lado izquierdo con espacio de 5% */
+        margin-left: 5%;
+        width: calc(40% - 20%); /* Ajustando el width considerando el gap */
+    }
+
+    .carousel {
+        /* Alineación al lado derecho con espacio de 10% */
+        margin-left: 20%; /* Gap entre elementos */
+        width: 40%;
+    }
+}
+   /***************************************BENEFICIOS**************************************************/
+      /********************PORQUE ELEGIRNOS**************************/
+
+.centro{
+    display: grid;
+    width: auto;
+    height:auto;
+    justify-content:center;
+    align-items:center;  
+    color: #194569; 
+    font-family: 'Nunito';
+
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; 
+    margin-bottom: 10%;
+}
+      /********************Seccion2*************************/
+
+.seccion-index{
+    margin: 5%;
+
+}
+    /********************circulos************************/
+
+.beneficio-index{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    gap:20px
+}
+    /*******************letra del cirtulo**********************/
+
+.b1{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; 
+}
+
+.circulo1{
+    width: 250px;
+    height: 250px;
+    flex-shrink:0;
+    border-radius: 50%;
+    background: #7FB0CE;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 10px; 
+}
+.circulo1 h3, .circulo1 a {
+    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
+    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
+}
+
+.circulo2{
+    width: 250px;
+    height: 250px;
+    flex-shrink:0;
+    border-radius: 100%;
+    background: rgba(247, 122, 106, 0.75);
+
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado dentro del bloque */
+    padding: 20px; /* Opcional: Añade un poco de padding si es necesario */
+}
+.circulo1 h3, .circulo2 a {
+    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
+    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
+
+}
+.circulo3{
+    width: 250px;
+    height: 250px;
+    flex-shrink:0;
+    border-radius: 100%;
+    background: #7FB0CE;
+
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Asegura que el texto esté centrado dentro del bloque */
+    padding: 20px; /* Opcional: Añade un poco de padding si es necesario */
+}
+.circulo1 h3, .circulo3 a {
+    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
+    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
+}
+
+/* Ajustes generales para pantallas mayores a 768px */
+
+@media only screen and (min-width: 768px) {
+    .beneficio-index {
+        display: flex;
+        flex-direction: row; /* Los elementos se colocarán horizontalmente */
+        gap: 50px; /* Espacio entre los elementos */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centro {
+        /* Ajusta este estilo según cómo desees que crezca .centro */
+        font-size: calc(30px + 2vw); /* Ejemplo para hacer el texto más grande conforme la pantalla crece */
+    }
+}
+/* Ajustes específicos para pantallas mayores a 1200px */
+
+@media only screen and (min-width: 1200px) {
+    .beneficio-index {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .centro {
+        /* Ajustes para pantallas más grandes */
+        font-size: calc(30px + 3vw); /* Aumenta más el tamaño del texto conforme la pantalla es más grande */
+    }
+}
+/****************************************SERVICIOS********************************************************************************/
+
+.seccion2-index{
+    margin-bottom: 5%;
+}
+.servicio-index{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap: 5%; /* Espacio entre las imágenes */
+}
+.sub2{
+    justify-content: center;
+    align-items:center;  
+
+    color: var(--Gray-gray-600, #718096);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 30px; 
+}
+
+.card {
+    width: 20rem !important; 
+  }
+.card-img-top{
+    padding:5%;
+    width: auto;
+    height: 5%;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.card-img-top1{
+    padding: 5%;
+    border-radius: 10px;
+    width: 5;
+    height: auto;
+}
+
+.card-body{
+    margin:10px;
+}
+
+/* Para tabletas: ajusta el diseño cuando la pantalla tenga hasta 768px de ancho */
+@media (max-width: 768px) {
+    .servicio-index{
+        flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
+        gap: 20px; /* Reduce el espacio entre las imágenes */
+    }
+}
+
+@media (max-width: 1200px) {
+    .servicio-index{
+        flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
+        gap: px; /* Reduce el espacio entre las imágenes */
+    }
+}
+
+/********************COMENTARIOS****************************************************************************/
+
+.seccion3{
+    padding: 10%;
+}
+
+/* Tipo de letra del comentario y párrafo */
+.carousel-item {
+    position: relative;
+    text-align: center; 
+    color: white;
+}
+
+/* Estilo comentario y párrafo */
+.carousel-item h5, .carousel-item p {
+    display: inline-block; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px 20px; /* Aumentado para una mejor visibilidad */
+    border-radius: 5px;
+    margin-top: 5%; 
+}
+
+/* Botones */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+
+
+/* Media query para pantallas desde 1020px */
+@media (min-width: 1020px) {
+    .seccion3 {
+        padding: 2%; /* Reducir aún más el padding para pantallas aún más grandes */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centrar el contenido de seccion3 */
+    }
+    .carousel {
+        width: 80%;  
+        margin: auto; 
+        max-width: 1200px; 
+    }
+
+    .carousel-item h5, .carousel-item p {
+        font-size: 1.4rem; /* Aumentar aún más el tamaño de la fuente */
+        padding: 20px 30px; /* Ajustar el padding */
+        display: block; 
+        background-color: rgba(0, 0, 0, 0.5); 
+
+    }
+  
+}
+
+
+
+/*****************FOOTER************************************************************************************/
+.footer {
+    background-color: rgba(250, 237, 205, 0.15); /* Color de fondo del footer */
+    color: #718096; /* Color del texto */
+    padding: 15px; /* Padding alrededor del contenido del footer */
+    margin-top: 5%;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100px; /* Ajusta el tamaño del logo según necesites */
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-links {
+    list-style-type: none; /* Elimina los bullets de la lista */
+    padding: 0 20px; /* Añade padding a la izquierda y derecha para separar las columnas */
+}
+
+.footer-links li {
+    margin-bottom: 10px; /* Espacio entre los ítems de la lista */
+}
+
+.footer-social a img {
+    width: 30px; /* Tamaño de los logos sociales */
+    margin-right: 10px; /* Espacio entre los logos sociales */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        padding: 10px 0; /* Ajusta el padding para dispositivos móviles */
+    }
+
+    .footer-social {
+        margin-top: 20px; /* Espacio adicional sobre los logos sociales en móviles */
+    }
+}
+
+
+
+/****************ACERCA DE NOSOTROSOS**********************/
+
+.quienes{
+    margin: 3%;
+}
+.titulo-quienes {
+    display: flex;
+    width: auto;
+    height:auto;
+
+    justify-content:center;
+    align-items:center;  
+    font-family: 'Nunito';
+    padding: 10px;
+
+    margin-bottom: 15px; /* Esto añade espacio entre el título y el botón */
+
+    color: #194569; 
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-size: normal;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+
+}
+
+.container-somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos hijos (incluida la imagen) horizontalmente */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    justify-content: center;
+
+    color: var(--00-on-surface-medium-emphasis, rgba(0, 0, 0, 0.60));
+    text-align: center;
+    font-family: Nunito;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px; /* 104.167% */
+    letter-spacing: 0.25px;
+}
+
+ .p-quienes{
+    font-family: 'Nunito'; /* Tipo de letra*/ 
+    margin: 10px 5px 0px;
+ }
+
+.image-quienes {
+    width: 75%; /* Ancho deseado para la imagen */
+    margin: 20px 0 0 ; /* Centra la imagen horizontalmente dentro de su contenedor */
+    border-radius: 15px; /* borde de la imagen */
+}
+
+.navbar-nav .nav-link:hover {
+    color: black; /* Cambia esto por el color que prefieras */
+}
