@@ -21,7 +21,7 @@
 
 .texto-y-boton {
     display: flex;
-    flex-direction: column; /* Esto coloca el título sobre el botón */
+    flex-direction: column; /* título sobre el botón */
     align-items: center; /* Esto centra ambos elementos horizontalmente */
     justify-content: center; /* Esto ayuda a centrar los elementos verticalmente si es necesario */
 }
@@ -448,7 +448,6 @@
 }
 
 
-
 /****************ACERCA DE NOSOTROSOS**********************/
 
 .quienes{
@@ -508,43 +507,197 @@
     color: black; /* Cambia esto por el color que prefieras */
 }
 
-/****************CURSOS*********************/
+/*******************************************CURSOS***************************************************/
 .banner-cursos {
-    display: flex; /* Habilita Flexbox para posicionar el contenedor de texto y la imagen lado a lado */
-    align-items: flex-start; /* Alinea los elementos al inicio, útil si la imagen es más alta que el texto */
-    justify-content: space-between; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
     padding: 20px;
+    background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/16.jpg); /* Degradado sobre la imagen */
+    width: auto;
+    height: 392px;
+    flex-shrink: 0;
+    background-size: cover;
+    position: relative;
+
 }
 
-.texto {
-    max-width: 50%; 
-}
+/****************CARD CURSOS*********************/
 
 .Cursos {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px; /* Agrega espacio entre el título y el párrafo */
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 46.875% */
+    margin-bottom: 50px; /* Agrega espacio entre el título y el párrafo */
 }
 
-.imagen {
-    width: 45%;
-    height: auto; /* Mantiene la proporción de la imagen */
+.TextoCurso{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.25px;
 }
-
-.VariosCursos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Crea 3 columnas de igual tamaño */
-    gap: 5px; /* Espacio entre las tarjetas */
+.Card{
+    gap: 5%; /* Espacio entre las tarjetas */
     justify-content: center; /* Centra las tarjetas en el contenedor */
     align-items: center; /* Alinea verticalmente */
-    padding: 20px; /* Espacio alrededor del contenedor */
+    margin: 20px;
+    flex-shrink: 0;
+
+}
+
+.card-solo{
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 5% 2%;
+}
+.card-titulo{
+    display: flex;
+    color: #000;
+    font-family: Nunito;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; /* 111.111% */
+    padding: 20px 5px;
 }
 
 
+.card-letra{
+    color: var(--Gray-gray-600, #718096);
+    font-family: Nunito;
+    font-size: 13px;
+    font-style: normal;
+    text-align: justify;
+    padding: 0px 10px;
+}
+.boton-leer-mas{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* Estilos adicionales para hacerlo parecer un botón */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+  }
 
 
+/* Para tabletas */
+@media (min-width: 768px) {
+    .banner-cursos {
+        height: 500px; /* Aumenta la altura para tabletas */
+        /* Agrega aquí cualquier otro ajuste específico para tabletas */
+    }
+    .Card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start; /* Ajusta si es necesario para tu diseño */
+    }
 
-/******Traduccion*****/
+    .card-solo {
+        flex: 1 1 calc(50% - 10%); /* 50% del contenedor menos el margen */
+        margin:1%; /* Ajuste para el margen entre tarjetas */
+    }
+}
+
+/* Para escritorios */
+@media (min-width: 1020px) {
+    .banner-cursos {
+        height: 600px; /* Aumenta aún más la altura para escritorios */
+        /* Agrega aquí cualquier otro ajuste específico para escritorios */
+    }
+    .Card {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start; /* Ajusta si es necesario para tu diseño */
+    }
+
+    .card-solo {
+        flex: 1 1 calc(60% - 30%); /* 50% del contenedor menos el margen */
+        margin:1%; /* Ajuste para el margen entre tarjetas */
+    }
+}
+
+
+/*****************************Traduccion*********************************/
+
+.banner-traduccion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px;
+    background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/pexels-polina-tankilevitch-4443191.jpg); /* Degradado sobre la imagen */
+    width: auto;
+    height: 392px;
+    flex-shrink: 0;
+    background-size: cover;
+    position: relative;
+}
+.Trad{
+    color: #FFF;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px; /* 46.875% */
+    margin-bottom: 50px; /* Agrega espacio entre el título y el párrafo */
+
+}
+.Texto_traduccion{
+    color: #F5F5F5;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 0.25px;
+}
+
+.Cotizar{
+    display: block; /* Cambiado a inline-flex para que se ajuste al contenido */
+    justify-content: center; /* Centrar el contenido del botón horizontalmente */
+    align-items: center; /* Centrar el contenido del botón verticalmente */
+    padding: 10px 20px; 
+    text-decoration: none; /* Quitar el subrayado de los enlaces */
+
+    margin: px auto; 
+    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
+    
+    color: #fff; /* Color del texto */
+    border: 2px solid #7FB0CE; /* Agregar contorno al botón */
+    background-color: #7FB0CE; /* Fondo transparente */
+    border-radius: 1em;/* Bordes del boton */
+
+    font-family: 'Nunito'; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.25px;
+
+    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+}
+
+
 /* Estilos generales */
 body {
     margin: 0;
@@ -582,4 +735,97 @@ body {
 .formulario-contacto input[type="submit"] {
     margin-top: 10px; /* Espacio por encima del botón enviar */
 }
+
+/**************************CONTACTO******************************/
+
+
+.form-information-childs, .escribenos, .info-childs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.escribenos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-childs {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos al centro */
+    justify-content: center; /* Separa los elementos a ambos extremos */
+  }
+  
+.contacto-titulo{
+    color: #194569;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 56.25% */
+}
+
+.formulario {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    min-height: 100vh; /* Asegura que el formulario esté centrado en toda la altura de la ventana */
+    margin: 15px; /* Añade un margen de 2px alrededor del contenedor */
+  }
+
+  .formulario form {
+    width: calc(100% - 2px); /* Ajusta el ancho para considerar el margen del .formulario */
+    padding: 1px;
+  }
+  
+  
+  .formulario input[type="text"],
+  .formulario input[type="email"],
+  .formulario input[type="tel"],
+  .formulario textarea,
+  .formulario input[type="submit"] {
+      width: 100%; /* Ocupa todo el ancho disponible */
+    }
+    
+
+  
+.formulario input[type="submit"] {
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 2px 15px; /* Espacio interno */
+    border: none; /* Remueve el borde */
+    margin-bottom: 20px; /* Consistencia con otros inputs */
+  }
+
+
+  
+  
+@media (min-width: 768px) {
+    .container-form{
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+    }
+    .form-infomation{
+        margin-left: 20px; /* Ajusta este valor según necesites */
+    }
+  
+}
+
+@media (min-width: 1020px) {
+    .container-form{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .form-infomation{
+        margin-left: 20px; /* Ajusta este valor según necesites */
+    }
+}
+
+   
+
+  
 

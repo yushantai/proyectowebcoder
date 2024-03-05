@@ -6,7 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../Css/style.css">
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+ <link rel="stylesheet" href="../Css/style.css">
  
     <title>Contacto</title>
 </head>
@@ -43,28 +44,63 @@
             </div>
           </nav>
     </header>
+    <!----------------------------------------------------------MAIN----------------------------------------------------------->
     <main>
+      <section class="contacte">
+        <div class="form-information-childs">
+          <h2 class="contacto-titulo">Contactos</h2>
+        </div>
+        <div class="container-form">
 
-        <section>
-        
-            <h1>Formulario de Contacto</h1>
+          <div class="form-infomation">
+            <div class="formulario">
             <form action="/submit_form" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br>
-                
-                <label for="email">Correo electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
-                
-                <input type="submit" value="Enviar">
+              <label for="mensaje">¿Qué te podemos ayudar?</label><br>
+              <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+        
+              <label for="nombre">Nombres y Apellidos:</label><br>
+              <input type="text" id="nombre" name="nombre" required><br><br>
+            
+              <label for="email">Correo Electrónico:</label><br>
+              <input type="email" id="email" name="email" required><br><br>
+        
+              <label for="telefono">Número telefónico:</label><br>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: +1234567890" pattern="[+]?[0-9]{1,14}" required><br><br>
+            
+              <input type="submit" value="Enviar">
             </form>
-        </body>
-        </section>
+          </div>     
+        </div>
+      
 
+        <div class="container-Inform">
+          <div>
+            <h3 class="escribenos"> o Escribenos por </h3>
+          </div>
+          <div class="information">
 
-    </main>
+            <div class="info-childs">
+              <span class="material-symbols-outlined">
+                  mail
+              </span>
+              <p>mandarin.global@gmail.com</p> 
+            </div>
+          
+            <div class="info-childs">
+              <span class="material-symbols-outlined">
+                  chat
+              </span>
+              <p>0967271423 </p>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+            
+  </main>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
