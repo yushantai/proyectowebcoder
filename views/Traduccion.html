@@ -56,50 +56,72 @@
             <!-----------------------------------------------------Beneficios------------------------------------------->
 
       <section class="beneficio-traduccion">
-        <h2> ¿Qué te proveemos?</h2>
-        <article>
-          <h3>Rapidez Asegurada</h3>
-          <p>Comprometidos con su urgencia, entregamos 
-            traducciones exactas y veloces, manteniendo la calidad en cada paso. Reciba su proyecto puntualmente. </p>
-        </article>
-
-        <article>
-          <h3>Compromiso con su Contento </h3>
-          <p>Su felicidad es nuestra meta. Ofrecemos traducciones fieles y ajustes gratuitos para asegurar su plena 
-            satisfacción. Nuestro servicio busca siempre ir más allá de lo esperado.</p>
-        </article>
-       
-        <article>
-          <h3>Calidad Suprema </h3>
-          <p>
-            Cada proyecto es tratado con meticulosa atención al detalle, asegurando que cada palabra refleje fielmente su mensaje original
-            Confíe en nosotros para resultados que superan los estándares.
-          </p>
-        </article>
-
-        <article>
-          <h3>Atención Personalizada</h3>
-          <p>Entendemos que cada cliente y proyecto es único. Por eso, brindamos un servicio personalizado, 
-            adaptándonos a sus necesidades específicas y ofreciendo asistencia directa y dedicada.</p>
-        </article>
-
+        <h2 class="Titulo2"> ¿Qué te proveemos?</h2>
+        <div class="beneficio-traduccion2">
+          <article class="card_art1">
+            <h3>Rapidez Asegurada</h3>
+            <p>Comprometidos con su urgencia, entregamos 
+              traducciones exactas y veloces, manteniendo la calidad en cada paso. Reciba su proyecto puntualmente. </p>
+          </article>
+  
+          <article class="card_art">
+            <h3>Compromiso con su Contento </h3>
+            <p>Su felicidad es nuestra meta. Ofrecemos traducciones fieles y ajustes gratuitos para asegurar su plena 
+              satisfacción. Nuestro servicio busca siempre ir más allá de lo esperado.</p>
+          </article>
+         
+          <article class="card_art1">
+            <h3>Calidad Suprema </h3>
+            <p>
+              Cada proyecto es tratado con meticulosa atención al detalle, asegurando que cada palabra refleje fielmente su mensaje original
+              Confíe en nosotros para resultados que superan los estándares.
+            </p>
+          </article>
+  
+          <article class="card_art">
+            <h3>Atención Personalizada</h3>
+            <p>Entendemos que cada cliente y proyecto es único. Por eso, brindamos un servicio personalizado, 
+              adaptándonos a sus necesidades específicas y ofreciendo asistencia directa y dedicada.</p>
+          </article>
+  
+        </div>
+ 
       </section>
           <!-----------------------------------------------------Formulario------------------------------------------->
 
     <section class="formulario-contacto">
-        <h1>Formulario de Contacto</h1>
-        <form action="/submit_form" method="post">
+      <div class="container-form">
+        <div class="imagentrad">
+          <img src="../Imagen/17.jpg" alt="traducciones">
+        </div>
+  
+        <div>
+          <h1>Envíanos para Cotizar</h1>
+        </div>
+  
+        <div class="formulario">
+          <form action="/submit_form" method="post">
             <label for="nombre">Nombre:</label><br>
             <input type="text" id="nombre" name="nombre" required><br>
             
             <label for="email">Correo electrónico:</label><br>
             <input type="email" id="email" name="email" required><br>
+  
+            <label for="telefono">Número telefónico:</label><br>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej: +1234567890" pattern="[+]?[0-9]{1,14}" required><br><br>
+  
+            <label for="pais">Pais:</label><br>
+            <input type="text" id="pais" name="pais" required><br>
             
-            <label for="mensaje">Mensaje:</label><br>
+            <label for="mensaje">Descripción:</label><br>
             <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br>
             
             <input type="submit" value="Enviar">
         </form>
+        </div>
+      </div>
+   
+
     </section>
     
 

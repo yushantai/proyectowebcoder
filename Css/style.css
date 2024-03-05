@@ -507,7 +507,7 @@
     color: black; /* Cambia esto por el color que prefieras */
 }
 
-/*******************************************CURSOS***************************************************/
+/**********************************************************CURSOS*****************************************************************/
 .banner-cursos {
     display: flex;
     flex-direction: column;
@@ -634,7 +634,13 @@
 }
 
 
-/*****************************Traduccion*********************************/
+/***************************************************TRADUCCION*********************************************************************/
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .banner-traduccion{
     display: flex;
@@ -694,48 +700,111 @@
     letter-spacing: 1.25px;
 
     cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+    transition: background-color 0.3s, color 0.3s; /* Tran dsición suave al cambiar de estado */
+}
+/****************Beneficios traduccion*********************/
+
+.Titulo2{
+    color: #194569;
+    text-align: center;
+    font-family: Nunito;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px; /* 90.909% */
 }
 
-
-/* Estilos generales */
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Estilos para la sección de traducción */
-.banner-traduccion {
+.beneficio-traduccion2{
     display: flex;
-    flex-direction: column; /* Esto asegura que el título, párrafo e imagen se apilen verticalmente */
-    align-items: flex-start; /* Alinea elementos a la izquierda */
-    padding: 20px; /* Añade algo de espacio alrededor */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Ajusta este valor según sea necesario */
+    margin: 10px 20px;
+    flex-shrink: 0;; 
 }
 
-.banner-traduccion img {
-    width: auto; /* Ajusta este valor según necesites para controlar el tamaño de la imagen */
-    max-width: 100%; /* Asegura que la imagen no se desborde de su contenedor */
-    margin-top: 20px; /* Espacio entre el texto y la imagen */
+.card_art, .card_art1 {
+    border-radius: 5px;
+    background: rgba(127, 176, 206, 0.74);
+    padding: 15px;
+    margin-bottom: 20px; /* Espacio entre tarjetas */
 }
 
-/* Estilos para el formulario de contacto */
+.card_art1 {
+    background: rgba(247, 122, 106, 0.75);
+}
+
+/* Media query para pantallas de tabletas */
+@media (min-width: 768px) {
+    .beneficio-traduccion2 {
+        flex-direction: row; /* Cambia a disposición horizontal */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
+        justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos */
+        gap: 20px; /* Espacio entre elementos */
+    }
+    .card_art, .card_art1 {
+        /* Asegura que los elementos no ocupen toda la fila en pantallas más grandes */
+        width: calc(50% - 40px); /* Ajusta este valor según el gap y el padding deseados */
+        margin-bottom: 0; /* Puede ajustar o remover el espacio adicional en la parte inferior si es necesario */
+    }
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 1024px) {
+    .card_art, .card_art1 {
+        /* Ajusta el ancho para pantallas más grandes, si es necesario */
+        width: calc(33.333% - 40px); /* Tres elementos por fila con espacio entre ellos */
+    }
+}
+/****************Formato de traduccion*********************/
+
 .formulario-contacto {
     display: flex;
     flex-direction: column; /* Alinea los elementos del formulario verticalmente */
     align-items: center; /* Centra el formulario en el contenedor */
     padding: 20px;
+    width: 100%; /* Asegura que el contenedor tome el ancho completo */
 }
 
-.formulario-contacto form {
-    width: 100%; /* Ajusta este valor para controlar el ancho del formulario */
-    max-width: 500px; /* Establece un ancho máximo para el formulario */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin perder sus proporciones */
+
 }
 
-.formulario-contacto input[type="submit"] {
-    margin-top: 10px; /* Espacio por encima del botón enviar */
-}
+.container-form {
+    display: flex;
+    flex-direction: column; /* Comienza con una disposición vertical */
+    align-items: center; /* Alinea los hijos al centro */
+  }
 
+  /* Estilos para tabletas */
+@media (min-width: 768px) {
+    .container-form {
+        flex-direction: row; /* Coloca la imagen y el formulario lado a lado */
+        justify-content: space-evenly; /* Espacia los elementos uniformemente */
+    }
+  
+    .imagentrad, .formulario {
+        flex: 1; /* Distribuye el espacio disponible entre la imagen y el formulario */
+        margin: 0 20px; /* Añade un poco de espacio entre la imagen y el formulario */
+    }
+    .imagentrad img {
+        max-width: 500px; /* Limita el tamaño máximo de la imagen */
+        max-height: 300px; /* Puedes ajustar el máximo de alto de la imagen aquí */
+    }
+  }
+  
+  /* Estilos para pantallas de desktop */
+  @media (min-width: 1024px) {
+    .container-form {
+      max-width: 960px; /* Limita el ancho máximo del contenedor */
+      margin: 0 auto; /* Centra el contenedor en la pantalla */
+    }
+  
+  }
 /**************************CONTACTO******************************/
 
 
@@ -790,7 +859,6 @@ body {
     }
     
 
-  
 .formulario input[type="submit"] {
     background-color: #4CAF50; /* Color de fondo */
     color: white; /* Color del texto */
@@ -798,9 +866,6 @@ body {
     border: none; /* Remueve el borde */
     margin-bottom: 20px; /* Consistencia con otros inputs */
   }
-
-
-  
   
 @media (min-width: 768px) {
     .container-form{
