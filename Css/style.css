@@ -8,6 +8,10 @@
 .header{
     background-color: #fff;
 }
+.main, .body{ 
+    background: rgba(250, 237, 205, 0.20);
+}
+
 /*******************************************************************MAIN******************************************/
 
    /*******************************************************************BANNER**************************/
@@ -384,8 +388,6 @@
   
 }
 
-
-
 /*****************FOOTER************************************************************************************/
 .footer {
     background-color: rgba(250, 237, 205, 0.15); /* Color de fondo del footer */
@@ -452,6 +454,7 @@
 
 .quienes{
     margin: 3%;
+    background-color: rgba(250, 237, 205, 0.15);
 }
 .titulo-quienes {
     display: flex;
@@ -636,7 +639,7 @@
 
 /***************************************************TRADUCCION*********************************************************************/
 /* Estilos generales */
-body {
+.body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -753,7 +756,6 @@ body {
 /* Media query para pantallas de escritorio */
 @media (min-width: 1024px) {
     .card_art, .card_art1 {
-        /* Ajusta el ancho para pantallas más grandes, si es necesario */
         width: calc(33.333% - 40px); /* Tres elementos por fila con espacio entre ellos */
     }
 }
@@ -807,25 +809,16 @@ img {
   }
 /**************************CONTACTO******************************/
 
+.contacte{
+    margin: 3%;
+}
 
-.form-information-childs, .escribenos, .info-childs {
+.form-information-childs, .escribenos {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.escribenos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-childs {
-    display: flex;
-    align-items: center; /* Alinea verticalmente los elementos al centro */
-    justify-content: center; /* Separa los elementos a ambos extremos */
-  }
-  
 .contacto-titulo{
     color: #194569;
     text-align: center;
@@ -834,30 +827,38 @@ img {
     font-style: normal;
     font-weight: 700;
     line-height: 36px; /* 56.25% */
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
 
 .formulario {
     display: flex;
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    min-height: 100vh; /* Asegura que el formulario esté centrado en toda la altura de la ventana */
-    margin: 15px; /* Añade un margen de 2px alrededor del contenedor */
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
   }
 
-  .formulario form {
-    width: calc(100% - 2px); /* Ajusta el ancho para considerar el margen del .formulario */
-    padding: 1px;
-  }
+.formulario form {
+    width: 100%;
+}
   
-  
-  .formulario input[type="text"],
-  .formulario input[type="email"],
-  .formulario input[type="tel"],
-  .formulario textarea,
-  .formulario input[type="submit"] {
-      width: 100%; /* Ocupa todo el ancho disponible */
-    }
-    
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+
+.formulario input[type="submit"] {
+      width: 280px; 
+      height: 40px; 
+      box-sizing: border-box;
+}
+
+.formulario input [type="mensaje"],
+.formulario textarea{
+    width: 280px; 
+    height: 50%; 
+    box-sizing: border-box;
+}
 
 .formulario input[type="submit"] {
     background-color: #4CAF50; /* Color de fondo */
@@ -866,27 +867,63 @@ img {
     border: none; /* Remueve el borde */
     margin-bottom: 20px; /* Consistencia con otros inputs */
   }
+
+.escribenos{
+    margin: 5%;
+}
+
+.info-childs{
+    display: flex;
+}
+
+.info1{
+    display: flex;
+    align-items: center;
+    margin-left: 3%;
+}
+
   
 @media (min-width: 768px) {
     .container-form{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         gap: 5px;
     }
     .form-infomation{
-        margin-left: 20px; /* Ajusta este valor según necesites */
+        margin-left: 20px; 
+        
     }
   
 }
 
 @media (min-width: 1020px) {
-    .container-form{
+    .container-form {
         display: flex;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: space-around;
+        gap: 50px;
     }
-    .form-infomation{
-        margin-left: 20px; /* Ajusta este valor según necesites */
+    .form-infomation {
+        margin-left: 50px; 
+    } 
+    .container-Inform{
+        display: table-column;
+        row-gap: 10px;
+   
+    }
+    .material-symbols-outlined {
+        font-size: 75px; /* Ajusta el tamaño de los íconos si es necesario */
+    }
+    .formulario input[type="text"],
+    .formulario input[type="email"],
+    .formulario input[type="tel"],
+    .formulario textarea,
+    .formulario input[type="submit"] {
+        width: 450px /* Ajuste de ancho al 100% para que ocupen el contenedor */
+    }
+
+    /* Si deseas ajustar específicamente el textarea para que tenga un tamaño diferente */
+    .formulario textarea {
+        height: 100px; /* Ajuste de altura a 200px o a tu preferencia */
     }
 }
 
