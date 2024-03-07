@@ -643,6 +643,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgba(250, 237, 205, 0.15);
 }
 
 .banner-traduccion{
@@ -666,7 +667,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 30px; /* 46.875% */
-    margin-bottom: 50px; /* Agrega espacio entre el título y el párrafo */
+    margin-bottom: 50px; /* Espacio entre el título y el párrafo */
 
 }
 .Texto_traduccion{
@@ -684,7 +685,7 @@
     display: block; /* Cambiado a inline-flex para que se ajuste al contenido */
     justify-content: center; /* Centrar el contenido del botón horizontalmente */
     align-items: center; /* Centrar el contenido del botón verticalmente */
-    padding: 10px 20px; 
+    padding: 10px 30px; 
     text-decoration: none; /* Quitar el subrayado de los enlaces */
 
     margin: px auto; 
@@ -715,6 +716,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: 50px; /* 90.909% */
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .beneficio-traduccion2{
@@ -737,9 +740,56 @@
 .card_art1 {
     background: rgba(247, 122, 106, 0.75);
 }
+.parrafo{
+    text-align: justify;
 
-/* Media query para pantallas de tabletas */
+}
+
+/****************Formato de traduccion*********************/
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    width: 100%; 
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin perder sus proporciones */
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column; /* Comienza con una disposición vertical */
+    align-items: center; 
+  }
+
+.SendCotizar{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+  /* Estilos para tabletas */
 @media (min-width: 768px) {
+    .container-form {
+        flex-direction: row; /* Coloca la imagen y el formulario lado a lado */
+        justify-content: space-evenly; /* Espacia los elementos uniformemente */
+        gap: 50px;
+    }
+  
+    .imagentrad, .formulario {
+        flex: 1; /* Distribuye el espacio disponible entre la imagen y el formulario */
+    }
+    .imagentrad img {
+        width: 400px;
+        height: 520px;
+        flex-shrink: 0;
+        margin-left: 100px;
+    }
     .beneficio-traduccion2 {
         flex-direction: row; /* Cambia a disposición horizontal */
         flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
@@ -748,62 +798,23 @@
     }
     .card_art, .card_art1 {
         /* Asegura que los elementos no ocupen toda la fila en pantallas más grandes */
-        width: calc(50% - 40px); /* Ajusta este valor según el gap y el padding deseados */
+        width: calc(50% - 30px); /* Ajusta este valor según el gap y el padding deseados */
         margin-bottom: 0; /* Puede ajustar o remover el espacio adicional en la parte inferior si es necesario */
     }
-}
 
-/* Media query para pantallas de escritorio */
-@media (min-width: 1024px) {
-    .card_art, .card_art1 {
-        width: calc(33.333% - 40px); /* Tres elementos por fila con espacio entre ellos */
-    }
-}
-/****************Formato de traduccion*********************/
-
-.formulario-contacto {
-    display: flex;
-    flex-direction: column; /* Alinea los elementos del formulario verticalmente */
-    align-items: center; /* Centra el formulario en el contenedor */
-    padding: 20px;
-    width: 100%; /* Asegura que el contenedor tome el ancho completo */
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin perder sus proporciones */
-
-}
-
-.container-form {
-    display: flex;
-    flex-direction: column; /* Comienza con una disposición vertical */
-    align-items: center; /* Alinea los hijos al centro */
-  }
-
-  /* Estilos para tabletas */
-@media (min-width: 768px) {
-    .container-form {
-        flex-direction: row; /* Coloca la imagen y el formulario lado a lado */
-        justify-content: space-evenly; /* Espacia los elementos uniformemente */
-    }
-  
-    .imagentrad, .formulario {
-        flex: 1; /* Distribuye el espacio disponible entre la imagen y el formulario */
-        margin: 0 20px; /* Añade un poco de espacio entre la imagen y el formulario */
-    }
-    .imagentrad img {
-        max-width: 500px; /* Limita el tamaño máximo de la imagen */
-        max-height: 300px; /* Puedes ajustar el máximo de alto de la imagen aquí */
+    .SendCotizar{
+        margin-bottom: 30px;
     }
   }
   
   /* Estilos para pantallas de desktop */
-  @media (min-width: 1024px) {
+@media (min-width: 1024px) {
     .container-form {
       max-width: 960px; /* Limita el ancho máximo del contenedor */
       margin: 0 auto; /* Centra el contenedor en la pantalla */
+    }
+    .card_art, .card_art1 {
+        width: calc(40% - 30px); /* Tres elementos por fila con espacio entre ellos */
     }
   
   }
