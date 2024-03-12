@@ -1,0 +1,61 @@
+// Variables
+$background-quienes: rgba(250, 237, 205, 0.15);
+$color-titulo: #194569;
+$color-texto: rgba(0, 0, 0, 0.60);
+$font-family-general: 'Nunito';
+$border-radius-general: 15px;
+$hover-color: black;
+
+// Mixin para centrado
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quienes {
+  margin: 3%;
+  background-color: $background-quienes;
+}
+
+.titulo-quienes {
+  @include center-flex;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px; // Espacio entre el título y el contenido siguiente
+  color: $color-titulo;
+  font-family: $font-family-general;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 65px;
+}
+
+.container-somos {
+  @include center-flex;
+  flex-direction: column;
+  color: $color-texto;
+  font-family: $font-family-general;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 25px; // 104.167%
+  letter-spacing: 0.25px;
+}
+
+.p-quienes {
+  font-family: $font-family-general; // Tipo de letra
+  margin: 10px 5px 0;
+}
+
+.image-quienes {
+  width: 75%; // Ancho deseado para la imagen
+  margin: 20px 0 0; // Centra la imagen horizontalmente dentro de su contenedor
+  border-radius: $border-radius-general; // Borde de la imagen
+}
+
+.navbar-nav .nav-link {
+  &:hover {
+    color: $hover-color; // Cambia esto por el color que prefieras
+  }
+}

@@ -1,0 +1,193 @@
+// Variables
+$color-white: #FFF;
+$color-light-gray: #F5F5F5;
+$color-button: #7FB0CE;
+$color-title: #194569;
+$color-card-blue: rgba(127, 176, 206, 0.74);
+$color-card-red: rgba(247, 122, 106, 0.75);
+$background-body: rgba(250, 237, 205, 0.15);
+$background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/pexels-polina-tankilevitch-4443191.jpg);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin smooth-transition {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@mixin card-style {
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px; // Espacio entre tarjetas
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $background-body;
+}
+
+.banner-traduccion {
+  @include flex-center;
+  flex-direction: column;
+  padding: 20px;
+  background: $background-banner;
+  width: auto;
+  height: 392px;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
+}
+
+.Trad {
+  @extend .banner-traduccion; // Si es necesario aplicar algunos estilos comunes
+  color: $color-white;
+  text-align: center;
+  font-family: $familia-fuente;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.Texto_traduccion {
+  color: $color-light-gray;
+  text-align: center;
+  font-family: $familia-fuente;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.Cotizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: $color-white;
+  border: 2px solid $color-button;
+  background-color: $color-button;
+  border-radius: 1em;
+  font-family: $familia-fuente;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+// Beneficios traduccion
+.Titulo2 {
+  color: $color-title;
+  text-align: center;
+  font-family: $familia-fuente;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.beneficio-traduccion2 {
+  @include flex-center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10px 20px;
+}
+
+.card_art, .card_art1 {
+  @include card-style;
+  background: $color-card-blue;
+}
+
+.card_art1 {
+  @extend .card_art; // Aprovecha los mismos estilos que .card_art
+  background: $color-card-red;
+}
+
+.parrafo {
+  text-align: justify;
+}
+
+// Formulario de contacto
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.SendCotizar {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+// Media Queries
+@media (min-width: 768px) {
+  .container-form {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+  }
+
+  .imagentrad, .formulario {
+    flex: 1;
+  }
+
+  .imagentrad img {
+    width: 400px;
+    height: 520px;
+    flex-shrink: 0;
+    margin-left: 100px;
+  }
+
+  .beneficio-traduccion2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .card_art, .card_art1 {
+    width: calc(50% - 30px);
+    margin-bottom: 0;
+  }
+
+  .SendCotizar {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-form {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .card_art, .card_art1 {
+    width: calc(40% - 30px);
+  }
+}

@@ -1,0 +1,76 @@
+// Variables
+$background-footer: rgba(250, 237, 205, 0.15);
+$color-text-footer: #718096;
+$padding-footer: 15px;
+$margin-top-footer: 5%;
+$footer-logo-size: 100px;
+$social-logo-size: 30px;
+$social-logo-margin: 10px;
+$breakpoint-mobile: 768px;
+
+// Mixin para la responsividad
+@mixin footer-responsive {
+  @media (max-width: $breakpoint-mobile) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links {
+      padding: 10px 0; // Ajusta el padding para dispositivos móviles
+    }
+
+    .footer-social {
+      margin-top: 20px; // Espacio adicional sobre los logos sociales en móviles
+    }
+  }
+}
+
+// Extends para estilos comunes
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: $background-footer;
+  color: $color-text-footer;
+  padding: $padding-footer;
+  margin-top: $margin-top-footer;
+}
+
+.footer-content {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  width: $footer-logo-size;
+}
+
+.footer-links-container {
+  @extend %flex-center;
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.footer-links li {
+  margin-bottom: 10px; // Espacio entre los ítems de la lista
+}
+
+.footer-social a img {
+  width: $social-logo-size;
+  margin-right: $social-logo-margin;
+}
+
+@include footer-responsive;

@@ -1,944 +1,818 @@
-/* reset css */
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
-.header{
-    background-color: #fff;
-}
-.main, .body{ 
-    background: rgba(250, 237, 205, 0.20);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*******************************************************************MAIN******************************************/
-
-   /*******************************************************************BANNER**************************/
-.banner-index {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-   /*********************Titulo y boton **************************/
-
-.texto-y-boton {
-    display: flex;
-    flex-direction: column; /* título sobre el botón */
-    align-items: center; /* Esto centra ambos elementos horizontalmente */
-    justify-content: center; /* Esto ayuda a centrar los elementos verticalmente si es necesario */
-}
-.Principal-titulo-index {
-    display: flex;
-    width: auto;
-    height:auto;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 10px;
-    margin-bottom: 15px; /* Esto añade espacio entre el título y el botón */
-    
-    color: #194569; 
-    font-family: 'Nunito';
-    font-size: 50px;
-    font-size: normal;
-    font-weight: 600;
-    line-height: 65px;
-    text-align: center;
-
+header {
+  background-color: #fff;
 }
 
-.boton-conoce-mas {
-    display: block; /* Cambiado a inline-flex para que se ajuste al contenido */
-    justify-content: center; /* Centrar el contenido del botón horizontalmente */
-    align-items: center; /* Centrar el contenido del botón verticalmente */
-    padding: 10px 20px; 
-    text-decoration: none; /* Quitar el subrayado de los enlaces */
-
-    margin: px auto; 
-    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
-    
-    color: #fff; /* Color del texto */
-    border: 2px solid #7FB0CE; /* Agregar contorno al botón */
-    background-color: #7FB0CE; /* Fondo transparente */
-    border-radius: 1em;/* Bordes del boton */
-
-    font-family: 'Nunito'; 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.25px;
-
-    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
-    transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de estado */
+.info1, .footer-links-container, .footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.boton-conoce-mas:hover, .boton-conoce-mas:focus {
-    color: #fff; /* Cambiar el color del texto al pasar el mouse o enfocar */
-    background-color: #194569; /* Cambiar el fondo al pasar el mouse o enfocar */
-}
-
-   /*********************imagenes**************************/
-.carousel {
-    margin: 8vw; /* Esto asegura que el margen sea siempre el 2% del ancho de la ventana del navegador */
-}
-.carousel img {
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que el contenedor */
-    height: auto; /* Mantiene el aspect ratio de la imagen */
-}
-
-
-   /********************Screen**************************/
-
-/* Ajustes generales para pantallas mayores a 768px */
-@media only screen and (min-width: 768px) {
-    .banner-index {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .texto-y-boton {
-        margin-left: 5%; /* Espacio del 5% con el borde izquierdo de la pantalla */
-        flex: 1; /* Ocupa el espacio disponible */
-    }
-
-    .carousel {
-        margin-right: 10%; /* Espacio del 10% con el borde derecho de la pantalla */
-        flex: 1; /* Ocupa el espacio disponible */
-    }
-}
-
-/* Ajustes específicos para pantallas mayores a 1200px */
-@media only screen and (min-width: 1200px) {
-    .banner-index {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .texto-y-boton, .carousel {
-        /* Reiniciamos los márgenes para asegurar la alineación correcta */
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .texto-y-boton {
-        /* Alineación al lado izquierdo con espacio de 5% */
-        margin-left: 5%;
-        width: calc(40% - 20%); /* Ajustando el width considerando el gap */
-    }
-
-    .carousel {
-        /* Alineación al lado derecho con espacio de 10% */
-        margin-left: 20%; /* Gap entre elementos */
-        width: 40%;
-    }
-}
-   /***************************************BENEFICIOS**************************************************/
-      /********************PORQUE ELEGIRNOS**************************/
-
-.centro{
-    display: grid;
-    width: auto;
-    height:auto;
-    justify-content:center;
-    align-items:center;  
-    color: #194569; 
-    font-family: 'Nunito';
-
-    text-align: center;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 25px; 
-    margin-bottom: 10%;
-}
-      /********************Seccion2*************************/
-
-.seccion-index{
-    margin: 5%;
-
-}
-    /********************circulos************************/
-
-.beneficio-index{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction: column;
-    gap:20px
-}
-    /*******************letra del cirtulo**********************/
-
-.b1{
-    color: #F5F5F5;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 25px; 
-}
-
-.circulo1{
-    width: 250px;
-    height: 250px;
-    flex-shrink:0;
-    border-radius: 50%;
-    background: #7FB0CE;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    text-align: center; 
-    padding: 10px; 
-}
-.circulo1 h3, .circulo1 a {
-    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
-    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
-}
-
-.circulo2{
-    width: 250px;
-    height: 250px;
-    flex-shrink:0;
-    border-radius: 100%;
-    background: rgba(247, 122, 106, 0.75);
-
-    display: flex;
-    flex-direction: column; /* Organiza el contenido en columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Asegura que el texto esté centrado dentro del bloque */
-    padding: 20px; /* Opcional: Añade un poco de padding si es necesario */
-}
-.circulo1 h3, .circulo2 a {
-    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
-    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
-
-}
-.circulo3{
-    width: 250px;
-    height: 250px;
-    flex-shrink:0;
-    border-radius: 100%;
-    background: #7FB0CE;
-
-    display: flex;
-    flex-direction: column; /* Organiza el contenido en columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Asegura que el texto esté centrado dentro del bloque */
-    padding: 20px; /* Opcional: Añade un poco de padding si es necesario */
-}
-.circulo1 h3, .circulo3 a {
-    margin: 0; /* Elimina márgenes predeterminados para un mejor control */
-    padding: 5px; /* Espaciado interno para separar los elementos dentro del círculo */
-}
-
-/* Ajustes generales para pantallas mayores a 768px */
-
-@media only screen and (min-width: 768px) {
-    .beneficio-index {
-        display: flex;
-        flex-direction: row; /* Los elementos se colocarán horizontalmente */
-        gap: 50px; /* Espacio entre los elementos */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .centro {
-        /* Ajusta este estilo según cómo desees que crezca .centro */
-        font-size: calc(30px + 2vw); /* Ejemplo para hacer el texto más grande conforme la pantalla crece */
-    }
-}
-/* Ajustes específicos para pantallas mayores a 1200px */
-
-@media only screen and (min-width: 1200px) {
-    .beneficio-index {
-        display: flex;
-        flex-direction: row;
-        gap: 50px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .centro {
-        /* Ajustes para pantallas más grandes */
-        font-size: calc(30px + 3vw); /* Aumenta más el tamaño del texto conforme la pantalla es más grande */
-    }
-}
-/****************************************SERVICIOS********************************************************************************/
-
-.seccion2-index{
-    margin-bottom: 5%;
-}
-.servicio-index{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    gap: 5%; /* Espacio entre las imágenes */
-}
-.sub2{
-    justify-content: center;
-    align-items:center;  
-
-    color: var(--Gray-gray-600, #718096);
-    text-align: center;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: 30px; 
-}
-
-.card {
-    width: 20rem !important; 
-  }
-.card-img-top{
-    padding:5%;
-    width: auto;
-    height: 5%;
-    flex-shrink: 0;
-    border-radius: 10px;
-}
-
-.card-img-top1{
-    padding: 5%;
-    border-radius: 10px;
-    width: 5;
-    height: auto;
-}
-
-.card-body{
-    margin:10px;
-}
-
-/* Para tabletas: ajusta el diseño cuando la pantalla tenga hasta 768px de ancho */
-@media (max-width: 768px) {
-    .servicio-index{
-        flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
-        gap: 20px; /* Reduce el espacio entre las imágenes */
-    }
-}
-
-@media (max-width: 1200px) {
-    .servicio-index{
-        flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
-        gap: px; /* Reduce el espacio entre las imágenes */
-    }
-}
-
-/********************COMENTARIOS****************************************************************************/
-
-.seccion3{
-    padding: 10%;
-}
-
-/* Tipo de letra del comentario y párrafo */
-.carousel-item {
-    position: relative;
-    text-align: center; 
-    color: white;
-}
-
-/* Estilo comentario y párrafo */
-.carousel-item h5, .carousel-item p {
-    display: inline-block; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px 20px; /* Aumentado para una mejor visibilidad */
-    border-radius: 5px;
-    margin-top: 5%; 
-}
-
-/* Botones */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(100%);
-}
-
-
-
-/* Media query para pantallas desde 1020px */
-@media (min-width: 1020px) {
-    .seccion3 {
-        padding: 2%; /* Reducir aún más el padding para pantallas aún más grandes */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Centrar el contenido de seccion3 */
-    }
-    .carousel {
-        width: 80%;  
-        margin: auto; 
-        max-width: 1200px; 
-    }
-
-    .carousel-item h5, .carousel-item p {
-        font-size: 1.4rem; /* Aumentar aún más el tamaño de la fuente */
-        padding: 20px 30px; /* Ajustar el padding */
-        display: block; 
-        background-color: rgba(0, 0, 0, 0.5); 
-
-    }
-  
-}
-
-/*****************FOOTER************************************************************************************/
 .footer {
-    background-color: rgba(250, 237, 205, 0.15); /* Color de fondo del footer */
-    color: #718096; /* Color del texto */
-    padding: 15px; /* Padding alrededor del contenido del footer */
-    margin-top: 5%;
+  background-color: rgba(250, 237, 205, 0.15);
+  color: #718096;
+  padding: 15px;
+  margin-top: 5%;
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-logo img {
-    width: 100px; /* Ajusta el tamaño del logo según necesites */
-}
-
-.footer-links-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  width: 100px;
 }
 
 .footer-links {
-    list-style-type: none; /* Elimina los bullets de la lista */
-    padding: 0 20px; /* Añade padding a la izquierda y derecha para separar las columnas */
+  list-style-type: none;
+  padding: 0 20px;
 }
 
 .footer-links li {
-    margin-bottom: 10px; /* Espacio entre los ítems de la lista */
+  margin-bottom: 10px;
 }
 
 .footer-social a img {
-    width: 30px; /* Tamaño de los logos sociales */
-    margin-right: 10px; /* Espacio entre los logos sociales */
+  width: 30px;
+  margin-right: 10px;
 }
 
-/* Responsividad */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links {
-        padding: 10px 0; /* Ajusta el padding para dispositivos móviles */
-    }
-
-    .footer-social {
-        margin-top: 20px; /* Espacio adicional sobre los logos sociales en móviles */
-    }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-links {
+    padding: 10px 0;
+  }
+  .footer-social {
+    margin-top: 20px;
+  }
+}
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(250, 237, 205, 0.15);
 }
 
-
-/****************ACERCA DE NOSOTROSOS**********************/
-
-.quienes{
-    margin: 3%;
-    background-color: rgba(250, 237, 205, 0.15);
+.boton-conoce-mas {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  margin: px auto;
+  text-align: center;
+  color: #fff;
+  border: 2px solid #7FB0CE;
+  background-color: #7FB0CE;
+  border-radius: 1em;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
-.titulo-quienes {
+.boton-conoce-mas:hover, .boton-conoce-mas:focus {
+  color: #fff;
+  background-color: #194569;
+}
+
+.banner-index {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media only screen and (min-width: 768px) {
+  .banner-index {
     display: flex;
-    width: auto;
-    height:auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .banner-index {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
-    justify-content:center;
-    align-items:center;  
-    font-family: 'Nunito';
-    padding: 10px;
+/*********************Titulo y boton **************************/
+.texto-y-boton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+  .texto-y-boton {
+    margin-left: 5%;
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .texto-y-boton {
+    margin: 0;
+    margin-left: 5%;
+    width: 20%;
+  }
+}
 
-    margin-bottom: 15px; /* Esto añade espacio entre el título y el botón */
+.Principal-titulo-index {
+  display: flex;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #194569;
+  font-family: "Nunito";
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+}
 
-    color: #194569; 
-    font-family: 'Nunito';
-    font-size: 50px;
-    font-size: normal;
-    font-weight: 600;
-    line-height: 65px;
-    text-align: center;
+/*********************imagenes**************************/
+.carousel {
+  margin: 8vw;
+}
+.carousel img {
+  max-width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .carousel {
+    margin-right: 10%;
+    flex: 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .carousel {
+    margin-left: 20%;
+    width: 40%;
+  }
+}
 
+.circulo1 h3, .circulo1 a, .circulo2 a, .circulo3 a {
+  margin: 0;
+  padding: 5px;
+}
+
+.centro {
+  display: grid;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  color: #194569;
+  font-family: "Nunito";
+  text-align: center;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 25px;
+  margin-bottom: 10%;
+}
+
+.seccion-index {
+  margin: 5%;
+}
+
+.beneficio-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.b1 {
+  color: #F5F5F5;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.circulo1, .circulo3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #7FB0CE;
+  padding: 10px;
+}
+
+.circulo2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(247, 122, 106, 0.75);
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .beneficio-index {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .centro {
+    font-size: calc(30px + 2vw);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .beneficio-index {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+  .centro {
+    font-size: calc(30px + 3vw);
+  }
+}
+.sub2 {
+  color: var(--Gray-gray-600, #718096);
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.seccion2-index {
+  margin-bottom: 5%;
+}
+
+.servicio-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%; /* Espacio entre las imágenes */
+}
+
+.sub2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 20rem !important;
+}
+
+.card-img-top {
+  padding: 5%;
+  width: auto;
+  height: 5%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.card-img-top1 {
+  padding: 5%;
+  border-radius: 10px;
+  width: 5;
+  height: auto;
+}
+
+.card-body {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  .servicio-index {
+    flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
+    gap: 20px; /* Ajusta el espacio entre las imágenes */
+  }
+}
+@media (max-width: 1200px) {
+  .servicio-index {
+    flex-direction: column; /* Mantiene la disposición de las imágenes a vertical */
+    gap: 20px; /* Ajusta el espacio entre las imágenes, si es necesario */
+  }
+}
+.carousel-item h5,
+.carousel-item p, .carousel-item {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+}
+
+.seccion3 {
+  padding: 10%;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+@media (min-width: 1020px) {
+  .seccion3 {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .carousel {
+    width: 80%;
+    margin: auto;
+    max-width: 1200px;
+  }
+  .carousel-item h5,
+  .carousel-item p {
+    font-size: 1.4rem;
+    padding: 20px 30px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+.quienes {
+  margin: 3%;
+  background-color: rgba(250, 237, 205, 0.15);
+}
+
+.titulo-quienes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  color: #194569;
+  font-family: "Nunito";
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 65px;
 }
 
 .container-somos {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra los elementos hijos (incluida la imagen) horizontalmente */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    justify-content: center;
-
-    color: var(--00-on-surface-medium-emphasis, rgba(0, 0, 0, 0.60));
-    text-align: center;
-    font-family: Nunito;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 25px; /* 104.167% */
-    letter-spacing: 0.25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Nunito";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 0.25px;
 }
 
- .p-quienes{
-    font-family: 'Nunito'; /* Tipo de letra*/ 
-    margin: 10px 5px 0px;
- }
+.p-quienes {
+  font-family: "Nunito";
+  margin: 10px 5px 0;
+}
 
 .image-quienes {
-    width: 75%; /* Ancho deseado para la imagen */
-    margin: 20px 0 0 ; /* Centra la imagen horizontalmente dentro de su contenedor */
-    border-radius: 15px; /* borde de la imagen */
+  width: 75%;
+  margin: 20px 0 0;
+  border-radius: 15px;
 }
 
 .navbar-nav .nav-link:hover {
-    color: black; /* Cambia esto por el color que prefieras */
+  color: black;
 }
 
-/**********************************************************CURSOS*****************************************************************/
 .banner-cursos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    padding: 20px;
-    background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/16.jpg); /* Degradado sobre la imagen */
-    width: auto;
-    height: 392px;
-    flex-shrink: 0;
-    background-size: cover;
-    position: relative;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/16.jpg);
+  width: auto;
+  height: 392px;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
 }
-
-/****************CARD CURSOS*********************/
 
 .Cursos {
-    color: #FFF;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px; /* 46.875% */
-    margin-bottom: 50px; /* Agrega espacio entre el título y el párrafo */
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 50px;
 }
 
-.TextoCurso{
-    color: #F5F5F5;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 100% */
-    letter-spacing: 0.25px;
-}
-.Card{
-    gap: 5%; /* Espacio entre las tarjetas */
-    justify-content: center; /* Centra las tarjetas en el contenedor */
-    align-items: center; /* Alinea verticalmente */
-    margin: 20px;
-    flex-shrink: 0;
-
+.TextoCurso {
+  color: #F5F5F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
 }
 
-.card-solo{
-    border-radius: 20px;
-    background: #FFF;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin: 5% 2%;
-}
-.card-titulo{
-    display: flex;
-    color: #000;
-    font-family: Nunito;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 40px; /* 111.111% */
-    padding: 20px 5px;
+.Card {
+  gap: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  flex-shrink: 0;
 }
 
-
-.card-letra{
-    color: var(--Gray-gray-600, #718096);
-    font-family: Nunito;
-    font-size: 13px;
-    font-style: normal;
-    text-align: justify;
-    padding: 0px 10px;
+.card-solo {
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 5% 2%;
 }
-.boton-leer-mas{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* Estilos adicionales para hacerlo parecer un botón */
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-  }
 
+.card-titulo {
+  display: flex;
+  color: #000;
+  font-family: Nunito;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 20px 5px;
+}
 
-/* Para tabletas */
+.card-letra {
+  color: var(--Gray-gray-600, #718096);
+  font-family: Nunito;
+  font-size: 13px;
+  text-align: justify;
+  padding: 0px 10px;
+}
+
+.boton-leer-mas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
 @media (min-width: 768px) {
-    .banner-cursos {
-        height: 500px; /* Aumenta la altura para tabletas */
-        /* Agrega aquí cualquier otro ajuste específico para tabletas */
-    }
-    .Card {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start; /* Ajusta si es necesario para tu diseño */
-    }
-
-    .card-solo {
-        flex: 1 1 calc(50% - 10%); /* 50% del contenedor menos el margen */
-        margin:1%; /* Ajuste para el margen entre tarjetas */
-    }
-}
-
-/* Para escritorios */
-@media (min-width: 1020px) {
-    .banner-cursos {
-        height: 600px; /* Aumenta aún más la altura para escritorios */
-        /* Agrega aquí cualquier otro ajuste específico para escritorios */
-    }
-    .Card {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start; /* Ajusta si es necesario para tu diseño */
-    }
-
-    .card-solo {
-        flex: 1 1 calc(60% - 30%); /* 50% del contenedor menos el margen */
-        margin:1%; /* Ajuste para el margen entre tarjetas */
-    }
-}
-
-
-/***************************************************TRADUCCION*********************************************************************/
-/* Estilos generales */
-.body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: rgba(250, 237, 205, 0.15);
-}
-
-.banner-traduccion{
+  .banner-cursos {
+    height: 500px;
+  }
+  .Card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    padding: 20px;
-    background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/pexels-polina-tankilevitch-4443191.jpg); /* Degradado sobre la imagen */
-    width: auto;
-    height: 392px;
-    flex-shrink: 0;
-    background-size: cover;
-    position: relative;
-}
-.Trad{
-    color: #FFF;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 30px; /* 46.875% */
-    margin-bottom: 50px; /* Espacio entre el título y el párrafo */
-
-}
-.Texto_traduccion{
-    color: #F5F5F5;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px; /* 100% */
-    letter-spacing: 0.25px;
-}
-
-.Cotizar{
-    display: block; /* Cambiado a inline-flex para que se ajuste al contenido */
-    justify-content: center; /* Centrar el contenido del botón horizontalmente */
-    align-items: center; /* Centrar el contenido del botón verticalmente */
-    padding: 10px 30px; 
-    text-decoration: none; /* Quitar el subrayado de los enlaces */
-
-    margin: px auto; 
-    text-align: center; /* Asegura que el texto dentro del botón esté centrado */
-    
-    color: #fff; /* Color del texto */
-    border: 2px solid #7FB0CE; /* Agregar contorno al botón */
-    background-color: #7FB0CE; /* Fondo transparente */
-    border-radius: 1em;/* Bordes del boton */
-
-    font-family: 'Nunito'; 
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1;
-    letter-spacing: 1.25px;
-
-    cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
-    transition: background-color 0.3s, color 0.3s; /* Tran dsición suave al cambiar de estado */
-}
-/****************Beneficios traduccion*********************/
-
-.Titulo2{
-    color: #194569;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 45px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 50px; /* 90.909% */
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-.beneficio-traduccion2{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Ajusta este valor según sea necesario */
-    margin: 10px 20px;
-    flex-shrink: 0;; 
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .card-solo {
+    flex: 1 1 40%;
+    margin: 1%;
+  }
+}
+@media (min-width: 1020px) {
+  .banner-cursos {
+    height: 600px;
+  }
+  .Card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .card-solo {
+    flex: 1 1 20%;
+    margin: 1%;
+  }
+}
+.body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(250, 237, 205, 0.15);
+}
+
+.banner-traduccion, .Trad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/pexels-polina-tankilevitch-4443191.jpg);
+  width: auto;
+  height: 392px;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
+}
+
+.Trad {
+  color: #FFF;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.Texto_traduccion {
+  color: #F5F5F5;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.Cotizar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #FFF;
+  border: 2px solid #7FB0CE;
+  background-color: #7FB0CE;
+  border-radius: 1em;
+  font-family: "Nunito";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.25px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.Titulo2 {
+  color: #194569;
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.beneficio-traduccion2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10px 20px;
 }
 
 .card_art, .card_art1 {
-    border-radius: 5px;
-    background: rgba(127, 176, 206, 0.74);
-    padding: 15px;
-    margin-bottom: 20px; /* Espacio entre tarjetas */
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(127, 176, 206, 0.74);
 }
 
 .card_art1 {
-    background: rgba(247, 122, 106, 0.75);
-}
-.parrafo{
-    text-align: justify;
-
+  background: rgba(247, 122, 106, 0.75);
 }
 
-/****************Formato de traduccion*********************/
+.parrafo {
+  text-align: justify;
+}
 
 .formulario-contacto {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 20px;
-    width: 100%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin perder sus proporciones */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .container-form {
-    display: flex;
-    flex-direction: column; /* Comienza con una disposición vertical */
-    align-items: center; 
-  }
-
-.SendCotizar{
-    margin-top: 30px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.SendCotizar {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
-  /* Estilos para tabletas */
 @media (min-width: 768px) {
-    .container-form {
-        flex-direction: row; /* Coloca la imagen y el formulario lado a lado */
-        justify-content: space-evenly; /* Espacia los elementos uniformemente */
-        gap: 50px;
-    }
-  
-    .imagentrad, .formulario {
-        flex: 1; /* Distribuye el espacio disponible entre la imagen y el formulario */
-    }
-    .imagentrad img {
-        width: 400px;
-        height: 520px;
-        flex-shrink: 0;
-        margin-left: 100px;
-    }
-    .beneficio-traduccion2 {
-        flex-direction: row; /* Cambia a disposición horizontal */
-        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola fila */
-        justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos */
-        gap: 20px; /* Espacio entre elementos */
-    }
-    .card_art, .card_art1 {
-        /* Asegura que los elementos no ocupen toda la fila en pantallas más grandes */
-        width: calc(50% - 30px); /* Ajusta este valor según el gap y el padding deseados */
-        margin-bottom: 0; /* Puede ajustar o remover el espacio adicional en la parte inferior si es necesario */
-    }
-
-    .SendCotizar{
-        margin-bottom: 30px;
-    }
+  .container-form {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
   }
-  
-  /* Estilos para pantallas de desktop */
+  .imagentrad, .formulario {
+    flex: 1;
+  }
+  .imagentrad img {
+    width: 400px;
+    height: 520px;
+    flex-shrink: 0;
+    margin-left: 100px;
+  }
+  .beneficio-traduccion2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .card_art, .card_art1 {
+    width: calc(50% - 30px);
+    margin-bottom: 0;
+  }
+  .SendCotizar {
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 1024px) {
-    .container-form {
-      max-width: 960px; /* Limita el ancho máximo del contenedor */
-      margin: 0 auto; /* Centra el contenedor en la pantalla */
-    }
-    .card_art, .card_art1 {
-        width: calc(40% - 30px); /* Tres elementos por fila con espacio entre ellos */
-    }
-  
+  .container-form {
+    max-width: 960px;
+    margin: 0 auto;
   }
-/**************************CONTACTO******************************/
+  .card_art, .card_art1 {
+    width: calc(40% - 30px);
+  }
+}
+.info1, .footer-content, .footer-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.contacte{
-    margin: 3%;
+.contacte {
+  margin: 3%;
 }
 
 .form-information-childs, .escribenos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacto-titulo {
+  color: #194569;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 36px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.formulario form {
+  width: 100%;
+}
+.formulario input[type=text],
+.formulario input[type=email],
+.formulario input[type=tel],
+.formulario input[type=submit] {
+  width: 280px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.formulario input[type=mensaje],
+.formulario textarea {
+  width: 280px;
+  height: 50%;
+  box-sizing: border-box;
+}
+.formulario input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2px 15px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.escribenos {
+  margin: 5%;
+}
+
+.info-childs {
+  display: flex;
+}
+
+.info1 {
+  margin-left: 3%;
+}
+
+@media (min-width: 768px) {
+  .container-form {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contacto-titulo{
-    color: #194569;
-    text-align: center;
-    font-family: Nunito;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 36px; /* 56.25% */
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-
-.formulario {
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    width: 100%;
+    justify-content: space-around;
+    gap: 5px;
   }
-
-.formulario form {
-    width: 100%;
-}
-  
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="tel"],
-
-.formulario input[type="submit"] {
-      width: 280px; 
-      height: 40px; 
-      box-sizing: border-box;
-}
-
-.formulario input [type="mensaje"],
-.formulario textarea{
-    width: 280px; 
-    height: 50%; 
-    box-sizing: border-box;
-}
-
-.formulario input[type="submit"] {
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 2px 15px; /* Espacio interno */
-    border: none; /* Remueve el borde */
-    margin-bottom: 20px; /* Consistencia con otros inputs */
+  .form-information {
+    margin-left: 20px;
   }
-
-.escribenos{
-    margin: 5%;
 }
-
-.info-childs{
-    display: flex;
-}
-
-.info1{
+@media (min-width: 1020px) {
+  .container-form {
     display: flex;
     align-items: center;
-    margin-left: 3%;
+    justify-content: center;
+    justify-content: space-around;
+    gap: 50px;
+  }
+  .form-information {
+    margin-left: 50px;
+  }
+  .container-Inform {
+    display: table-column;
+    row-gap: 10px;
+  }
+  .material-symbols-outlined {
+    font-size: 75px;
+  }
+  .formulario input[type=text],
+  .formulario input[type=email],
+  .formulario input[type=tel],
+  .formulario textarea,
+  .formulario input[type=submit] {
+    width: 450px;
+  }
+  .formulario textarea {
+    height: 100px;
+  }
 }
 
-  
-@media (min-width: 768px) {
-    .container-form{
-        display: flex;
-        justify-content: space-around;
-        gap: 5px;
-    }
-    .form-infomation{
-        margin-left: 20px; 
-        
-    }
-  
-}
-
-@media (min-width: 1020px) {
-    .container-form {
-        display: flex;
-        justify-content: space-around;
-        gap: 50px;
-    }
-    .form-infomation {
-        margin-left: 50px; 
-    } 
-    .container-Inform{
-        display: table-column;
-        row-gap: 10px;
-   
-    }
-    .material-symbols-outlined {
-        font-size: 75px; /* Ajusta el tamaño de los íconos si es necesario */
-    }
-    .formulario input[type="text"],
-    .formulario input[type="email"],
-    .formulario input[type="tel"],
-    .formulario textarea,
-    .formulario input[type="submit"] {
-        width: 450px /* Ajuste de ancho al 100% para que ocupen el contenedor */
-    }
-
-    /* Si deseas ajustar específicamente el textarea para que tenga un tamaño diferente */
-    .formulario textarea {
-        height: 100px; /* Ajuste de altura a 200px o a tu preferencia */
-    }
-}
-
-   
-
-  
-
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,132 @@
+// Variables
+$font-family-nunito: 'Nunito', sans-serif;
+$color-text: #194569;
+$background-submit: #4CAF50;
+$submit-text-color: white;
+
+// Mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Extends
+%flex-center {
+  @include flexCenter;
+}
+
+.contacte {
+    margin: 3%;
+  }
+  
+  .form-information-childs, .escribenos {
+    @include flexCenter;
+  }
+  
+  .contacto-titulo {
+    color: $color-text;
+    text-align: center;
+    font-family: $font-family-nunito;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 36px; // 56.25%
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .formulario {
+    @include flexCenter;
+    width: 100%;
+  
+    form {
+      width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="submit"] {
+      width: 280px;
+      height: 40px;
+      box-sizing: border-box;
+    }
+  
+    input[type="mensaje"],
+    textarea {
+      width: 280px;
+      height: 50%;
+      box-sizing: border-box;
+    }
+  
+    input[type="submit"] {
+      background-color: $background-submit;
+      color: $submit-text-color;
+      padding: 2px 15px;
+      border: none;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .escribenos {
+    margin: 5%;
+  }
+  
+  .info-childs {
+    display: flex;
+  }
+  
+  .info1 {
+    @extend %flex-center;
+    margin-left: 3%;
+  }
+  
+  // Media Queries
+  @media (min-width: 768px) {
+    .container-form {
+      @include flexCenter;
+      justify-content: space-around;
+      gap: 5px;
+    }
+  
+    .form-information {
+      margin-left: 20px;
+    }
+  }
+  
+  @media (min-width: 1020px) {
+    .container-form {
+      @include flexCenter;
+      justify-content: space-around;
+      gap: 50px;
+    }
+  
+    .form-information {
+      margin-left: 50px;
+    }
+  
+    .container-Inform {
+      display: table-column;
+      row-gap: 10px;
+    }
+  
+    .material-symbols-outlined {
+      font-size: 75px; // Ajusta el tamaño de los íconos si es necesario
+    }
+  
+    .formulario {
+      input[type="text"],
+      input[type="email"],
+      input[type="tel"],
+      textarea,
+      input[type="submit"] {
+        width: 450px; // Ajuste de ancho al 100% para que ocupen el contenedor
+      }
+  
+      // Ajuste específico para textarea
+      textarea {
+        height: 100px; // Ajuste de altura a tu preferencia
+      }
+    }
+  }
+  

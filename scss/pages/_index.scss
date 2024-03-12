@@ -1,0 +1,341 @@
+.banner-index {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  
+    @media only screen and (min-width: 768px) {
+      display: flex;
+    }
+  
+    @media only screen and (min-width: 1200px) {
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+
+/*********************Titulo y boton **************************/
+.texto-y-boton {
+    display: flex;
+    flex-direction: column; // título sobre el botón
+    align-items: center; // Esto centra ambos elementos horizontalmente
+    justify-content: center; // Esto ayuda a centrar los elementos verticalmente si es necesario
+  
+    @media only screen and (min-width: 768px) {
+      margin-left: 5%; // Espacio del 5% con el borde izquierdo de la pantalla
+      flex: 1; // Ocupa el espacio disponible
+    }
+  
+    @media only screen and (min-width: 1200px) {
+      margin: 0; // Reiniciamos los márgenes para asegurar la alineación correcta
+      margin-left: 5%;
+      width: calc(40% - 20%); // Ajustando el width considerando el gap
+    }
+  }
+
+  .Principal-titulo-index {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-bottom: 15px; // espacio entre el título y el botón
+    color: #194569;
+    font-family: 'Nunito';
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 65px;
+    text-align: center;
+  }
+  
+  
+  /*********************imagenes**************************/
+.carousel {
+    margin: 8vw; //  margen sea siempre el 2% del ancho de la ventana del navegador
+  
+    img {
+      max-width: 100%; //  imagen no sea más ancha que el contenedor
+      height: auto; // Mantiene el aspect ratio de la imagen
+    }
+  
+    @media only screen and (min-width: 768px) {
+      margin-right: 10%; // Espacio del 10% con el borde derecho de la pantalla
+      flex: 1; // Ocupa el espacio disponible
+    }
+  
+    @media only screen and (min-width: 1200px) {
+      margin-left: 20%; // Gap entre elementos
+      width: 40%;
+    }
+  }
+
+// BENEFICIOS
+
+$tamano-fuente-grande: 30px;
+$tamano-fuente-medio: 25px;
+$espaciado-entre-elementos: 20px;
+$radio-borde-circulo: 50%;
+$ancho-circulo: 250px;
+$alto-circulo: 250px;
+
+// Mixins para flex containers
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+// Base para el texto dentro de circulos
+%texto-base-circulo {
+  margin: 0; // Elimina márgenes 
+  padding: 5px; // Espaciado interno 
+}
+
+.centro {
+  display: grid;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  color: $color-principal;
+  font-family: $familia-fuente;
+  text-align: center;
+  font-size: $tamano-fuente-grande;
+  font-style: normal;
+  font-weight: 600;
+  line-height: $tamano-fuente-medio;
+  margin-bottom: 10%;
+}
+
+.seccion-index {
+  margin: 5%;
+}
+
+.beneficio-index {
+  @include flex-center-column;
+  gap: $espaciado-entre-elementos;
+}
+
+.b1 {
+  color: $color-texto;
+  text-align: center;
+  font-family: $familia-fuente;
+  font-size: $tamano-fuente-grande;
+  font-style: normal;
+  font-weight: 500;
+  line-height: $tamano-fuente-medio;
+}
+
+// Clases para círculos
+.circulo1, .circulo3 {
+  @include flex-center-column;
+  width: $ancho-circulo;
+  height: $alto-circulo;
+  flex-shrink: 0;
+  border-radius: $radio-borde-circulo;
+  background: $color-circulo;
+  padding: 10px;
+}
+
+.circulo2 {
+  @include flex-center-column;
+  width: $ancho-circulo;
+  height: $alto-circulo;
+  flex-shrink: 0;
+  border-radius: $radio-borde-circulo;
+  background: $color-circulo2;
+  padding: 20px;
+}
+
+.circulo1 h3, .circulo1 a, .circulo2 a, .circulo3 a {
+  @extend %texto-base-circulo;
+}
+
+// Media queries para ajustes responsivos
+@media only screen and (min-width: 768px) {
+  .beneficio-index {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centro {
+    font-size: calc(#{$tamano-fuente-grande} + 2vw);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .beneficio-index {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centro {
+    font-size: calc(#{$tamano-fuente-grande} + 3vw);
+  }
+}
+// SERVICIO
+
+// Variables
+$color-texto: var(--Gray-gray-600, #718096);
+$espaciado-entre-imagenes: 5%;
+$espaciado-entre-imagenes-columna: 20px;
+$tamano-fuente: 20px;
+$peso-fuente: 200;
+$linea-altura: 30px;
+$ancho-card: 20rem;
+$padding-img-top: 5%;
+$radio-borde-img: 10px;
+$margin-body: 10px;
+
+// Mixin para flexbox center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Extend para texto común
+%texto-comun {
+  color: $color-texto;
+  text-align: center;
+  font-family: Nunito;
+  font-size: $tamano-fuente;
+  font-style: normal;
+  font-weight: $peso-fuente;
+  line-height: $linea-altura;
+}
+
+.seccion2-index {
+  margin-bottom: 5%;
+}
+
+.servicio-index {
+  @include flex-center;
+  gap: $espaciado-entre-imagenes; /* Espacio entre las imágenes */
+}
+
+.sub2 {
+  @include flex-center;
+  @extend %texto-comun;
+}
+
+.card {
+  width: $ancho-card !important;
+}
+
+.card-img-top {
+  padding: $padding-img-top;
+  width: auto;
+  height: 5%;
+  flex-shrink: 0;
+  border-radius: $radio-borde-img;
+}
+
+.card-img-top1 {
+  padding: $padding-img-top;
+  border-radius: $radio-borde-img;
+  width: 5;
+  height: auto;
+}
+
+.card-body {
+  margin: $margin-body;
+}
+
+// Media queries
+@media (max-width: 768px) {
+  .servicio-index {
+    flex-direction: column; /* Cambia la disposición de las imágenes a vertical */
+    gap: $espaciado-entre-imagenes-columna; /* Ajusta el espacio entre las imágenes */
+  }
+}
+
+@media (max-width: 1200px) {
+  .servicio-index {
+    flex-direction: column; /* Mantiene la disposición de las imágenes a vertical */
+    gap: $espaciado-entre-imagenes-columna; /* Ajusta el espacio entre las imágenes, si es necesario */
+  }
+}
+
+// COMENTARIO
+// Variables
+$color-texto-carousel: white;
+$fondo-carousel-item: rgba(0, 0, 0, 0.5);
+$radio-borde: 5px;
+$padding-carousel-item: 10px 20px;
+$margin-top-carousel-item: 5%;
+$invertir-iconos: invert(100%);
+$padding-seccion3: 10%;
+$ancho-carousel: 80%;
+$ancho-max-carousel: 1200px;
+$tamano-fuente-grande: 1.4rem;
+$padding-grande: 20px 30px;
+
+// Mixins
+@mixin center-flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Extends
+%texto-carousel {
+  display: inline-block;
+  background-color: $fondo-carousel-item;
+  padding: $padding-carousel-item;
+  border-radius: $radio-borde;
+  margin-top: $margin-top-carousel-item;
+  color: $color-texto-carousel;
+  text-align: center;
+}
+
+.seccion3 {
+  padding: $padding-seccion3;
+}
+
+.carousel-item {
+  position: relative;
+  @extend %texto-carousel; // Usa propiedades de color y alineación de texto
+}
+
+.carousel-item h5,
+.carousel-item p {
+  @extend %texto-carousel; // Extiende el estilo de fondo, padding, etc.
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: $invertir-iconos;
+}
+
+@media (min-width: 1020px) {
+  .seccion3 {
+    padding: 2%;
+    @include center-flex-column; // Incluye el mixin para flex column y centraje
+  }
+  .carousel {
+    width: $ancho-carousel;
+    margin: auto;
+    max-width: $ancho-max-carousel;
+  }
+  .carousel-item h5,
+  .carousel-item p {
+    font-size: $tamano-fuente-grande;
+    padding: $padding-grande;
+    display: block;
+    background-color: $fondo-carousel-item;
+  }
+}
+
+
+
+  

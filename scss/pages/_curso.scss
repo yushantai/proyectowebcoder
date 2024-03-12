@@ -1,0 +1,124 @@
+// Variables
+$color-titulo-cursos: #FFF;
+$color-texto-cursos: #F5F5F5;
+$font-family-cursos: Nunito;
+$background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0.74)), url(../Imagen/16.jpg);
+$color-card: #FFF;
+$shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+$color-boton: #007bff;
+
+// Mixin para centrado
+@mixin center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.banner-cursos {
+  @include center-flex;
+  padding: 20px;
+  background: $background-banner;
+  width: auto;
+  height: 392px;
+  flex-shrink: 0;
+  background-size: cover;
+  position: relative;
+}
+
+.Cursos {
+  color: $color-titulo-cursos;
+  @include center-flex;
+  font-family: $font-family-cursos;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 50px;
+}
+
+.TextoCurso {
+  color: $color-texto-cursos;
+  @include center-flex;
+  font-family: $font-family-cursos;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.Card {
+  gap: 5%;
+  @include center-flex;
+  margin: 20px;
+  flex-shrink: 0;
+}
+
+.card-solo {
+  border-radius: 20px;
+  background: $color-card;
+  box-shadow: $shadow-card;
+  margin: 5% 2%;
+}
+
+.card-titulo {
+  display: flex;
+  color: #000;
+  font-family: $font-family-cursos;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  padding: 20px 5px;
+}
+
+.card-letra {
+  color: var(--Gray-gray-600, #718096);
+  font-family: $font-family-cursos;
+  font-size: 13px;
+  text-align: justify;
+  padding: 0px 10px;
+}
+
+.boton-leer-mas {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 20px;
+  background-color: $color-boton;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+// Media queries
+@media (min-width: 768px) {
+  .banner-cursos {
+    height: 500px;
+  }
+  .Card {
+    @include center-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .card-solo {
+    flex: 1 1 calc(50% - 10%);
+    margin: 1%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .banner-cursos {
+    height: 600px;
+  }
+  .Card {
+    @include center-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .card-solo {
+    flex: 1 1 calc(30% - 10%);
+    margin: 1%;
+  }
+}

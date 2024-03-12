@@ -1,0 +1,28 @@
+
+.boton-conoce-mas {
+    display: block; // Cambiado a inline-flex para que se ajuste al contenido
+    justify-content: center; // Centrar el contenido del botón horizontalmente
+    align-items: center; // Centrar el contenido del botón verticalmente
+    padding: 10px 20px;
+    text-decoration: none; // Quitar el subrayado de los enlaces
+    margin: px auto;
+    text-align: center; // Asegura que el texto dentro del botón esté centrado
+    color: #fff; // Color del texto
+    border: 2px solid #7FB0CE; // Agregar contorno al botón
+    background-color: #7FB0CE; // Fondo transparente
+    border-radius: 1em; // Bordes del boton
+    font-family: $familia-fuente;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 1.25px;
+    cursor: pointer; // Cambiar el cursor para indicar que es clickeable
+    transition: background-color 0.3s, color 0.3s; // Transición suave al cambiar de estado
+  
+    &:hover, &:focus {
+      color: #fff; // Cambiar el color del texto al pasar el mouse o enfocar
+      background-color: #194569; // Cambiar el fondo al pasar el mouse o enfocar
+    }
+  }
+
+  
