@@ -40,7 +40,10 @@ $submit-text-color: white;
     width: 100%;
   
     form {
-      width: 100%;
+      width: 100%;     
+      display: flex;
+      flex-direction: column; // Asegura que los elementos se apilen verticalmente.
+      gap: 10px; // Espacio entre los elementos del formulario.
     }
   
     input[type="text"],

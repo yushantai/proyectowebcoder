@@ -45,7 +45,6 @@ $background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0
 }
 
 .Trad {
-  @extend .banner-traduccion; // Si es necesario aplicar algunos estilos comunes
   color: $color-white;
   text-align: center;
   font-family: $familia-fuente;
@@ -126,6 +125,26 @@ $background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0
   align-items: center;
   padding: 20px;
   width: 100%;
+
+  form {
+    width: 100%;     
+    display: flex;
+    flex-direction: column; // Asegura que los elementos se apilen verticalmente.
+    gap: 10px; // Espacio entre los elementos del formulario.
+  }
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"],
+.formulario textarea,
+.formulario select {
+  border: 1px solid #ccc; /* Color y grosor del borde */
+  padding: 8px; /* Espaciado interno */
+  width: 100%; /* Ancho del campo */
+  box-sizing: border-box; /* Incluye el borde y el relleno en el ancho total */
+  border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+  margin-bottom: 10px; /* Espacio entre campos */
 }
 
 img {

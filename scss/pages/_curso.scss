@@ -8,15 +8,23 @@ $shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $color-boton: #007bff;
 
 // Mixin para centrado
-@mixin center-flex {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+@mixin flex-column-center {
+  display: flex;
+  flex-direction: column; // Alinea los elementos verticalmente
+  justify-content: center; // Centra los elementos verticalmente en el contenedor
+  align-items: center; // Centra los elementos horizontalmente en el contenedor
+  text-align: center; // Centra el texto de los elementos hijos
+}
+
 .banner-cursos {
-  @include center-flex;
+  @include flex-column-center; // Usa el mixin para alineación vertical
   padding: 20px;
   background: $background-banner;
   width: auto;
@@ -26,19 +34,20 @@ $color-boton: #007bff;
   position: relative;
 }
 
+
 .Cursos {
   color: $color-titulo-cursos;
-  @include center-flex;
+  @include flex-center;
   font-family: $font-family-cursos;
   font-size: 64px;
   font-weight: 700;
   line-height: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .TextoCurso {
   color: $color-texto-cursos;
-  @include center-flex;
+  @include flex-center ;
   font-family: $font-family-cursos;
   font-size: 20px;
   font-weight: 400;
@@ -47,17 +56,18 @@ $color-boton: #007bff;
 }
 
 .Card {
-  gap: 5%;
-  @include center-flex;
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 3%;
   margin: 20px;
-  flex-shrink: 0;
 }
 
 .card-solo {
+  flex-basis: calc(25% - 40%);
   border-radius: 20px;
   background: $color-card;
   box-shadow: $shadow-card;
-  margin: 5% 2%;
+  margin: 5px 5px;
 }
 
 .card-titulo {
@@ -78,6 +88,7 @@ $color-boton: #007bff;
   padding: 0px 10px;
 }
 
+
 .boton-leer-mas {
   display: block;
   margin-left: auto;
@@ -96,7 +107,7 @@ $color-boton: #007bff;
     height: 500px;
   }
   .Card {
-    @include center-flex;
+    @include flex-center;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
