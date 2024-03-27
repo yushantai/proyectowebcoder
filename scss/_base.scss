@@ -16,4 +16,49 @@ $color-background: rgba(250, 237, 205, 0.15);
 $color-texto: #F5F5F5;
 $familia-fuente: 'Nunito';
 
+@mixin flex-center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+// contacto
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column; // Alinea los elementos verticalmente
+    justify-content: center; // Centra los elementos verticalmente en el contenedor
+    align-items: center; // Centra los elementos horizontalmente en el contenedor
+    text-align: center; // Centra el texto de los elementos hijos
+  }
+// traduccion
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+ 
+  
+  @mixin smooth-transition {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  @mixin card-style {
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px; // Espacio entre tarjetas
+  }
+
+
 

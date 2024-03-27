@@ -26,13 +26,20 @@
   }
 
   /* Estilos para el botón de enviar */
+
+  // Variables botones
+$font-family-nunito: 'Nunito', sans-serif;
+$color-text: #194569;
+$background-submit: #4CAF50;
+$submit-text-color: white;
+
 .formulario input[type="submit"] {
-  background-color: #007bff; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Elimina el borde del botón */
-  padding: 10px 20px; /* Espaciado interno */
-  border-radius: 4px; /* Radio de borde para esquinas redondeadas */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  background-color: #007bff; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 4px; 
+  cursor: pointer; 
 }
 
 /* Estilos para el botón de enviar al pasar el cursor */
@@ -53,7 +60,7 @@ $radio-borde: 5px;
   background-color: none;
   color: $color-texto-boton;
   text-decoration: none;
-  border: none; /* Asegura que no haya borde */
+  border: none; 
   border-radius: none;
   transition: background-color 0.3s;
 
@@ -64,7 +71,7 @@ $radio-borde: 5px;
 
 /* estilos.css */
 .footer-links a {
-  text-decoration: none; /* Esto quita el subrayado */
-  color: inherit; /* Opcional: para que el color del enlace sea el mismo que el del texto circundante */
+  text-decoration: none; 
+  color: inherit;
 }
 

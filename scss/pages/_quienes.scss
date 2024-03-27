@@ -6,13 +6,6 @@ $font-family-general: 'Nunito';
 $border-radius-general: 15px;
 $hover-color: black;
 
-// Mixin para centrado
-@mixin center-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
 .quienes {
   margin: 3%;
@@ -20,7 +13,7 @@ $hover-color: black;
 }
 
 .titulo-quienes {
-  @include center-flex;
+  @include flex-center;
   width: auto;
   height: auto;
   padding: 10px;
@@ -33,7 +26,7 @@ $hover-color: black;
 }
 
 .container-somos {
-  @include center-flex;
+  @include flex-center;
   flex-direction: column;
   color: $color-texto;
   font-family: $font-family-general;
@@ -49,9 +42,13 @@ $hover-color: black;
 }
 
 .image-quienes {
-  width: 75%; // Ancho deseado para la imagen
-  margin: 20px 0 0; // Centra la imagen horizontalmente dentro de su contenedor
-  border-radius: $border-radius-general; // Borde de la imagen
+  width: 75%; 
+  margin: 20px 0 0; 
+  border-radius: $border-radius-general; 
+  transition: transform 0.5s ease; 
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .navbar-nav .nav-link {

@@ -7,22 +7,6 @@ $color-card: #FFF;
 $shadow-card: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $color-boton: #007bff;
 
-// Mixin para centrado
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-@mixin flex-column-center {
-  display: flex;
-  flex-direction: column; // Alinea los elementos verticalmente
-  justify-content: center; // Centra los elementos verticalmente en el contenedor
-  align-items: center; // Centra los elementos horizontalmente en el contenedor
-  text-align: center; // Centra el texto de los elementos hijos
-}
-
 .banner-cursos {
   @include flex-column-center; // Usa el mixin para alineación vertical
   padding: 20px;
@@ -68,6 +52,12 @@ $color-boton: #007bff;
   background: $color-card;
   box-shadow: $shadow-card;
   margin: 5px 5px;
+
+  img {
+    width: 100%; // Asegura que la imagen se adapte al contenedor
+    height: auto;
+    border-radius: $radio-borde-img;
+  }
 }
 
 .card-titulo {
@@ -123,7 +113,7 @@ $color-boton: #007bff;
     height: 600px;
   }
   .Card {
-    @include center-flex;
+    @include flex-center ;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;

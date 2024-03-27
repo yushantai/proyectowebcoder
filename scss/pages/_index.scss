@@ -14,8 +14,6 @@ $background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0
     flex-shrink: 0;
     background-size: cover;
     
-
-
     @media only screen and (min-width: 768px) {
       display: flex;
       height: 500px;
@@ -31,18 +29,18 @@ $background-banner: linear-gradient(rgba(25, 69, 105, 0.74), rgba(25, 69, 105, 0
 .texto-y-boton {
     display: flex;
     flex-direction: column; // título sobre el botón
-    align-items: center; // Esto centra ambos elementos horizontalmente
-    justify-content: center; // Esto ayuda a centrar los elementos verticalmente si es necesario
+    align-items: center; 
+    justify-content: center; 
   
     @media only screen and (min-width: 768px) {
-      margin-left: 5%; // Espacio del 5% con el borde izquierdo de la pantalla
-      flex: 1; // Ocupa el espacio disponible
+      margin-left: 5%; 
+      flex: 1; 
     }
   
     @media only screen and (min-width: 1200px) {
-      margin: 0; // Reiniciamos los márgenes para asegurar la alineación correcta
+      margin: 0; 
       margin-left: 5%;
-      width: calc(40% - 20%); // Ajustando el width considerando el gap
+      width: calc(40% - 20%); 
     }
   }
 
@@ -73,14 +71,7 @@ $radio-borde-circulo: 50%;
 $ancho-circulo: 250px;
 $alto-circulo: 250px;
 
-// Mixins para flex containers
-@mixin flex-center-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+
 
 // Base para el texto dentro de circulos
 %texto-base-circulo {
@@ -132,7 +123,13 @@ $alto-circulo: 250px;
   border-radius: $radio-borde-circulo;
   background: $color-circulo;
   padding: 10px;
+  transition: transform 0.5s ease; 
+  &:hover {
+    transform: scale(1.2);
+  }
 }
+ 
+
 
 .circulo2 {
   @include flex-center-column;
@@ -142,6 +139,10 @@ $alto-circulo: 250px;
   border-radius: $radio-borde-circulo;
   background: $color-circulo2;
   padding: 20px;
+  transition: transform 0.5s ease; 
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 
 .circulo1 h3, .circulo1 a, .circulo2 a, .circulo3 a {
@@ -190,12 +191,6 @@ $padding-img-top: 5%;
 $radio-borde-img: 10px;
 $margin-body: 10px;
 
-// Mixin para flexbox center
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 // Extend para texto común
 %texto-comun {
@@ -313,10 +308,9 @@ $padding-grande: 20px 30px;
   }
   .carousel-item h5,
   .carousel-item p {
-    @extend %texto-carousel; // Extiende el estilo de fondo, padding, etc.
-    display: block; // Asegura que ocupen su propia línea
-    margin: 30px 0; // Agrega un poco de margen arriba y abajo para separar el texto
-
+    @extend %texto-carousel; 
+    display: block; 
+    margin: 30px 0; 
   }
   .carousel-control-prev-icon,
   .carousel-control-next-icon {

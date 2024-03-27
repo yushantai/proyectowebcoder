@@ -1,19 +1,8 @@
-// Variables
-$font-family-nunito: 'Nunito', sans-serif;
-$color-text: #194569;
-$background-submit: #4CAF50;
-$submit-text-color: white;
 
-// Mixins
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 // Extends
 %flex-center {
-  @include flexCenter;
+  @include flex-center;
 }
 
 .contacte {
@@ -21,7 +10,7 @@ $submit-text-color: white;
   }
   
   .form-information-childs, .escribenos {
-    @include flexCenter;
+    @include flex-center;
   }
   
   .contacto-titulo {
@@ -36,7 +25,7 @@ $submit-text-color: white;
   }
   
   .formulario {
-    @include flexCenter;
+    @include flex-center;
     width: 100%;
   
     form {
@@ -87,7 +76,7 @@ $submit-text-color: white;
   // Media Queries
   @media (min-width: 768px) {
     .container-form {
-      @include flexCenter;
+      @include flex-center;
       justify-content: space-around;
       gap: 5px;
     }
@@ -99,7 +88,7 @@ $submit-text-color: white;
   
   @media (min-width: 1020px) {
     .container-form {
-      @include flexCenter;
+      @include flex-center;
       justify-content: space-around;
       gap: 50px;
     }
